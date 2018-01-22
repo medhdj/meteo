@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Meteo</string>
+    <string name="title_activity_forecast_details">ForecastDetailsActivity</string>
+    <string name="title_activity_city_forecast">CityForecastActivity</string>
+    <string name="error_message">Une erreur est survenue!</string>
+    <string name="settings">Settings</string>
+</resources>

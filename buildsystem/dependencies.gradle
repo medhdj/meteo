@@ -1,0 +1,84 @@
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
+ext {
+    globalConfigs = [
+            'appId'                    : "com.medhdj.samples.meteo",
+            'appVersionCode'           : 1,
+            'appVersionName'           : "1.0",
+            'testInstrumentationRunner': "android.support.test.runner.AndroidJUnitRunner"
+    ]
+
+    versions = [
+            'minSdk'            : 16,
+            'targetSdk'         : 27,
+            'compileSdk'        : 27,
+            'buildTools'        : '27.0.2',
+
+            'support'           : '27.0.2',
+
+
+            'okhttp'            : '3.9.1',
+            'retrofit'          : '2.3.0',
+            'gson'              : '2.8.1',
+            'appacheCommonsLang': '3.6',
+            'picasso'           : '2.5.2',
+
+
+            'butterknife'       : '8.8.1',
+            'rxJava'            : '2.1.8',
+            'rxAndroid'         : '2.0.1',
+
+            'junit'             : '4.12',
+            'espresso'          : '3.0.1',
+            'testRunner'        : '1.0.1'
+    ]
+
+    presentationDependencies = [
+            appcompat          : "com.android.support:appcompat-v7:${versions.support}",
+            designLib          : "com.android.support:design:${versions.support}",
+            recyclerView       : "com.android.support:recyclerview-v7:${versions.support}",
+            butterKnife        : "com.jakewharton:butterknife:${versions.butterknife}",
+            annotationProcessor: "com.jakewharton:butterknife-compiler:${versions.butterknife}",
+            rxJava             : "io.reactivex.rxjava2:rxjava:${versions.rxJava}",
+            rxAndroid          : "io.reactivex.rxjava2:rxandroid:${versions.rxAndroid}",
+            picasso            : "com.squareup.picasso:picasso:${versions.picasso}"
+    ]
+    presentationTestDependencies = [
+            junit     : "junit:junit:${versions.junit}",
+            espresso  : "com.android.support.test.espresso:espresso-core:${versions.espresso}",
+            testRunner: "com.android.support.test:runner:${versions.testRunner}"
+    ]
+
+    domainDependencies = [
+            rxJava            : "io.reactivex.rxjava2:rxjava:${versions.rxJava}",
+            rxAndroid         : "io.reactivex.rxjava2:rxandroid:${versions.rxAndroid}",
+            appacheCommonsLang: "org.apache.commons:commons-lang3:${versions.appacheCommonsLang}"
+    ]
+
+    domainTestDependencies = [
+            junit: "junit:junit:${versions.junit}"
+    ]
+
+    dataDependencies = [
+            retrofit             : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+            retrofitRxAdapter    : "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}",
+            retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
+            okHttp               : "com.squareup.okhttp3:okhttp:${versions.okhttp}",
+            okHttpLogging        : "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}",
+            gson                 : "com.google.code.gson:gson:${versions.gson}",
+            rxJava               : "io.reactivex.rxjava2:rxjava:${versions.rxJava}",
+            rxAndroid            : "io.reactivex.rxjava2:rxandroid:${versions.rxAndroid}",
+            appacheCommonsLang   : "org.apache.commons:commons-lang3:${versions.appacheCommonsLang}"
+    ]
+
+
+    dataTestDependencies = [
+            junit: "junit:junit:${versions.junit}",
+    ]
+}
